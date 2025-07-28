@@ -148,15 +148,15 @@ public class Main {
 
                 switch (Nlocalidad) {
                     case 1:
-                        System.out.println("En " + l1.getNombre() + " hay " + l1.getEspacio() + " espacios libres");
+                        System.out.println("En  " + l1.getNombre() + " hay " + l1.getEspacio() + " espacios libres");
                         break;
                 
                     case 2:
-                        System.out.println("En " + l2.getNombre() + " hay " + l2.getEspacio() + " espacios libres");
+                        System.out.println("En  " + l2.getNombre() + " hay " + l2.getEspacio() + " espacios libres");
                         break;
 
                     case 3:
-                        System.out.println("En " + l3.getNombre() + " hay " + l3.getEspacio() + " espacios libres");
+                        System.out.println("En  " + l3.getNombre() + " hay " + l3.getEspacio() + " espacios libres");
                         break;
                 }
                 System.out.println("-------------------------------------------------------------");
