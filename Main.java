@@ -10,7 +10,7 @@ public class Main {
         Localidad l2 = new Localidad(20, 500, "Localidad 5");
         Localidad l3 = new Localidad(20, 1000, "Localidad 10");
 
-        Comprador c1 = new Comprador(null, null, 1, 0);
+        Comprador c1 = new Comprador(null, null, 1, 1);
         
         int opcion;
         Scanner leer = new Scanner(System.in);
@@ -57,8 +57,14 @@ public class Main {
                             }
                             else{
                                 if (l1.getEspacio()< c1.getCan_boletos()){
+                                    int costo = l1.getCosto()*l1.getEspacio();
+                                    if(costo > c1.getPresupuesto()){
+                                        System.out.println("Fondos insuficientes para, "+ l1.getNombre() +  " por favor genere otro ticket");
+                                    }
+                                    else{
                                     System.out.println("No tenemos suficientes espacios para venderle, solo se le venderan " + l1.getEspacio() + " boletos");
                                     l1.setEspacio(l1.getEspacio() - l1.getEspacio());
+                                }
                                 }
                                 else {
                                     int costo = l1.getCosto()*c1.getCan_boletos();
@@ -79,8 +85,14 @@ public class Main {
                             }
                             else{
                                 if (l2.getEspacio()< c1.getCan_boletos()){
+                                    int costo = l2.getCosto()*l2.getEspacio();
+                                    if(costo > c1.getPresupuesto()){
+                                        System.out.println("Fondos insuficientes para, "+ l2.getNombre() +  " por favor genere otro ticket");
+                                    }
+                                    else{
                                     System.out.println("No tenemos suficientes espacios para venderle, solo se le venderan " + l2.getEspacio() + " boletos");
                                     l2.setEspacio(l2.getEspacio() - l2.getEspacio());
+                                }
                                 }
                                 else {
                                     int costo = l2.getCosto()*c1.getCan_boletos();
@@ -101,8 +113,14 @@ public class Main {
                             }
                             else{
                                 if (l3.getEspacio()< c1.getCan_boletos()){
+                                    int costo = l3.getCosto()*l3.getEspacio();
+                                    if(costo > c1.getPresupuesto()){
+                                        System.out.println("Fondos insuficientes para, "+ l3.getNombre() +  " por favor genere otro ticket");
+                                    }
+                                    else{
                                     System.out.println("No tenemos suficientes espacios para venderle, solo se le venderan " + l3.getEspacio() + " boletos");
                                     l3.setEspacio(l3.getEspacio() - l3.getEspacio());
+                                }
                                 }
                                 else {
                                     int costo = l3.getCosto()*c1.getCan_boletos();
@@ -148,15 +166,15 @@ public class Main {
 
                 switch (Nlocalidad) {
                     case 1:
-                        System.out.println("En  " + l1.getNombre() + " hay " + l1.getEspacio() + " espacios libres");
+                        System.out.println("En " + l1.getNombre() + " hay " + l1.getEspacio() + " espacios libres");
                         break;
                 
                     case 2:
-                        System.out.println("En  " + l2.getNombre() + " hay " + l2.getEspacio() + " espacios libres");
+                        System.out.println("En " + l2.getNombre() + " hay " + l2.getEspacio() + " espacios libres");
                         break;
 
                     case 3:
-                        System.out.println("En  " + l3.getNombre() + " hay " + l3.getEspacio() + " espacios libres");
+                        System.out.println("En " + l3.getNombre() + " hay " + l3.getEspacio() + " espacios libres");
                         break;
                 }
                 System.out.println("-------------------------------------------------------------");
